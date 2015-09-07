@@ -1,5 +1,6 @@
 div(ng-include='"components/navbar/navbar.html"')
 
+//- This container needs to be beautified.
 .container
   .row
     .col-lg-12
@@ -10,6 +11,7 @@ div(ng-include='"components/navbar/navbar.html"')
             | {{thing.name}}({{thing.identifier}})
             button.close(type='button', ng-click='deleteThing(thing)') ×
 
+  //- This form needs to be beautified.
   form.thing-form
     label Syncs in realtime across clients
     p.input-group
@@ -25,7 +27,7 @@ div(ng-include='"components/navbar/navbar.html"')
       input.form-control(type='text', placeholder='Follow up.', ng-model='newFollowup')
       input.form-control(type='text', placeholder='Evaluation.', ng-model='newEvaluation')
       span.input-group-btn
-        button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
+        button.btn.btn-primary(type='submit', ng-click='addThing()') Add Record
 
 footer.footer
   .container

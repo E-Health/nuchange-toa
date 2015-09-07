@@ -41,6 +41,14 @@ angular.module 'toaApp'
     $http.get('/api/things/' + thing._id).success (awesomeThing) ->
       $scope.newName = awesomeThing.name
       $scope.newIdentifier = awesomeThing.identifier
+      $scope.newAvtar = awesomeThing.avtar
+      $scope.newDob = awesomeThing.dob
+      $scope.newDatet = awesomeThing.datet
+      $scope.newMrp = awesomeThing.mrp
+      $scope.newNurse = awesomeThing.nurse
+      $scope.newStory = awesomeThing.story
+      $scope.newAssessment = awesomeThing.assessment
+      $scope.newFollowup = awesomeThing.followup
     $http.delete '/api/things/' + thing._id
 
   $scope.$on '$destroy', ->
