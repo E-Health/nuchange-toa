@@ -5,7 +5,16 @@ var mongoose = require('mongoose'),
 
 var ThingSchema = new Schema({
   name: String,
-  info: String,
+  identifier: String,
+  avtar: String,
+  dob: String,
+  datet: String,
+  mrp: String,
+  nurse: String,
+  story: String,
+  assessment: String,
+  followup: String,
+  evaluation: String,
   active: Boolean
 });
 
