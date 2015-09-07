@@ -6,7 +6,7 @@ div(ng-include='"components/navbar/navbar.html"')
       h1.page-header Patients:
       ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
         li
-          a(href='#', tooltip='{{thing.id}}')
+          a(href='#', ng-click='editThing(thing)', tooltip='{{thing.id}}')
             | {{thing.name}}({{thing.identifier}})
             button.close(type='button', ng-click='deleteThing(thing)') ×
 
