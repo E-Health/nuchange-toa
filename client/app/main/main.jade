@@ -18,11 +18,45 @@ div(ng-include='"components/navbar/navbar.html"')
             | {{thing.followup}}
             | {{thing.evaluation}}
             button.close(type='button', ng-click='deleteThing(thing)') ×
+<script>
+| $(".hide-form").click(function(){
+|    $("#form").hide();
+| });
 
+| $(".show-form").click(function(){
+|    $("#form").show();
+|});
+</script>
+a.hide-form [Hide form |
+a.show-form  Show form]
   //- This form needs to be beautified.
-  form.thing-form
-    label Syncs in realtime across clients
-    p.input-group
+<form id="form" class="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+<h1>TOA</h1>
+<div class="content">
+<div class="intro"><p>Use the form below to add patient details</p></div>
+<div id="section0" >
+</div>
+<h2 class="section">Patient</h2>
+<div id="section1" >
+<div class="field"><label for="name">Name</label><input ng-model='newName' type="text" id="name" name="name" size="20" placeholder="Name" required></div>
+<div class="field"><label for="identifier">Identifier</label><input ng-model='newIdentifier' type="text" id="identifier" name="identifier" size="20" placeholder="Identifier" required></div>
+<div class="field"><label for="avtar">Avtar</label><select ng-model='newAvtar' id="avtar" name="avtar"><option value="avtar1">avtar1</option><option value="avtar2">avtar2</option></select></div>
+<div class="field"><label for="dob">Date of Birth</label><input ng-model='newDob' type="date" id="dob" name="dob" placeholder="yyyy-mm-dd"></div>
+<div class="field"><label for="datet">Date of TOA</label><input ng-model='newDatet' type="date" id="datet" name="datet" value="yyyy-mm-dd" required></div>
+<div class="field"><label for="mrp">MRP</label><input ng-model='newMrp' type="text" id="mrp" name="mrp" size="20" placeholder="MRP" required></div>
+<div class="field"><label for="nurse">Nurse</label><input ng-model='newNurse' type="text" id="nurse" name="nurse" size="20" placeholder="Nurse"></div>
+</div>
+<h2 class="section">TOA</h2>
+<div id="section2" >
+<div class="field"><label for="story">Story</label><textarea ng-model='newStory' id="story" name="story" placeholder="Story..." wrap="hard"></textarea></div>
+<div class="field"><label for="assessment">Assessment</label><textarea ng-model='newAssessment' id="assessment" name="assessment" placeholder="Assessment..." wrap="hard"></textarea></div>
+<div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="followup">Follow Up</label><textarea ng-model='newFollowup' id="followup" name="followup" placeholder="Follow Up..." wrap="hard"></textarea></div>
+<div class="field"><label for="evaluation">Evaluation</label><textarea ng-model='newEvaluation' id="evaluation" name="evaluation" placeholder="Evaluation..." wrap="hard"></textarea></div>
+<div class="field"><input ng-click='addThing()' class="btn-primary" type="submit" id="buttonsubmit" name="submit"></div>
+</div>
+</div>
+</form>
+//
       input.form-control(type='text', placeholder='Name.', ng-model='newName')
       input.form-control(type='text', placeholder='Identifier.', ng-model='newIdentifier')
       input.form-control(type='text', placeholder='Avtar.', ng-model='newAvtar')
@@ -36,7 +70,7 @@ div(ng-include='"components/navbar/navbar.html"')
       input.form-control(type='text', placeholder='Evaluation.', ng-model='newEvaluation')
       span.input-group-btn
         button.btn.btn-primary(type='submit', ng-click='addThing()') Add Record
-
+// 
 footer.footer
   .container
     p
