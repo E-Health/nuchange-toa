@@ -15,6 +15,7 @@ var ThingSchema = new Schema({
   assessment: String,
   followup: String,
   evaluation: String,
+  ip: String,
   active: Boolean
 });
 

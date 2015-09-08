@@ -7,7 +7,9 @@ angular.module 'toaApp'
   $http.get('/api/things').success (awesomeThings) ->
     $scope.awesomeThings = awesomeThings
     socket.syncUpdates 'thing', $scope.awesomeThings
-
+  $http.get('/api/things/ip/ip').success (clientIp) ->
+    $scope.newIp = clientIp.ip
+  
   $scope.addThing = ->
     return if $scope.newName is ''
     $http.post '/api/things',
@@ -22,6 +24,7 @@ angular.module 'toaApp'
       assessment: $scope.newAssessment
       followup: $scope.newFollowup
       evaluation: $scope.newEvaluation
+      ip : $scope.newIp
     $scope.newName = ''
     $scope.newIdentifier = ''
     $scope.newAvtar = ''
