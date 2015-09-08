@@ -14,7 +14,7 @@ div(ng-include='"components/navbar/navbar.html"')
               h5 DOB: {{thing.dob | limitTo:10 }} 
               h5 TOA: {{thing.datet | limitTo:10 }}
               h5 MRP: {{thing.mrp}}
-              h5 NURSE: {{thing.nurse}}
+              h5 NURSE: {{thing.nurse}} {{thing.ip}}
             div.panel-body  
               img.img-circle.pull-left.col-lg-3.img-responsive(src="assets/images/{{thing.avtar}}" alt="Avtar")  
             div.clearfix
@@ -61,22 +61,16 @@ a.show-form  Show form]
 <div class="field"><label for="name">Name</label><input ng-model='newName' type="text" id="name" name="name" size="20" placeholder="Name" required></div>
 <div class="field"><label for="identifier">Identifier</label><input ng-model='newIdentifier' type="text" id="identifier" name="identifier" size="20" placeholder="Identifier" required></div>
 <div class="field"><label for="avtar">Avtar</label><select ng-model='newAvtar' id="avtar" name="avtar">
-<option value="avatar-01.svg">avatar1</option>
-<option value="avatar-02.svg">avatar2</option>
-<option value="avatar-03.svg">avatar3</option>
-<option value="avatar-04.svg">avatar4</option>
-<option value="avatar-05.svg">avatar5</option>
-<option value="avatar-06.svg">avatar6</option>
-<option value="avatar-07.svg">avatar7</option>
-<option value="avatar-08.svg">avatar8</option>
-<option value="avatar-09.svg">avatar9</option>
-<option value="avatar-10.svg">avatar10</option>
-<option value="avatar-11.svg">avatar11</option>
-<option value="avatar-12.svg">avatar12</option>
-<option value="avatar-13.svg">avatar13</option>
-<option value="avatar-14.svg">avatar14</option>
-<option value="avatar-15.svg">avatar15</option>
-<option value="avatar-16.svg">avatar16</option>
+<option value="male-01.png">Male 1</option>
+<option value="female-01.png">Female 1</option>
+<option value="male-02.png">Male 2</option>
+<option value="female-02.png">Female 2</option>
+<option value="male-03.png">Male 3</option>
+<option value="female-03.png">Female 3</option>
+<option value="male-04.png">Male 4</option>
+<option value="female-04.png">Female 4</option>
+<option value="male-05.png">Male 5</option>
+<option value="female-05.png">Female 5</option>
 </select></div>
 <div class="field"><label for="dob">Date of Birth</label><input ng-model='newDob' type="date" id="dob" name="dob" placeholder="yyyy-mm-dd"></div>
 <div class="field"><label for="datet">Date of TOA</label><input ng-model='newDatet' type="date" id="datet" name="datet" value="yyyy-mm-dd" required></div>
@@ -97,5 +91,5 @@ a.show-form  Show form]
 footer.footer
   .container
     p
-      a.nuchange(href='http://nuchange.ca') NuChange ToA
+      a.nuchange(href='http://nuchange.ca') NuChange ToA Ver 1.0.1
       
