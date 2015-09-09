@@ -31,26 +31,19 @@ Thing.find({}).remove(function() {
   });
 });
 */
-Thing.find({}).remove(function() {
+Thing.find({ name: /^Test/ }).remove(function() {
   Thing.create({
-    name : 'Data Reset',
-    avatar: 'male-01.png',
+    name : 'Test Patient',
+    avtar : 'male-02.png',
+    identifier : 'Delete Me'
+  }, {
+    name : 'Test Patient',
+    avtar : 'female-02.png',
     identifier : 'Delete Me'
   });
 });
 
-User.create({
-  provider: 'local',
-  role: 'admin',
-  name: 'Admin',
-  email: 'admin@admin.com',
-  password: 'admin'
-}, function() {
-    console.log('Creating default admin.');
-  }
-);
-
-User.find({email: 'admin@admin.com'}).remove(function() {
+User.find({ name: /^Admin/ }).remove(function() {
   User.create({
     provider: 'local',
     role: 'admin',
