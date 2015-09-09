@@ -6,36 +6,38 @@ div(ng-include='"components/navbar/navbar.html"')
     .col-lg-12
       h1.page-header Patients:
       //-ul.nav.nav-tabs.nav-stacked
-        
-      div.panel.panel-default.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
-          div.panel-heading
-            div.pull-right 
-              h4 {{thing.name}} ({{thing.identifier}})
-              h5 DOB: {{thing.dob | limitTo:10 }} 
-              h5 TOA: {{thing.datet | limitTo:10 }}
-              h5 MRP: {{thing.mrp}}
-              h5 NURSE: {{thing.nurse}} {{thing.ip}}
-            div.panel-body  
-              img.img-circle.pull-left.col-lg-3.img-responsive(src="assets/images/{{thing.avtar}}" alt="Avtar")  
-            div.clearfix
-            hr          
-            b STORY: 
-            | {{thing.story}}
-            hr
-            b ASSESSMENT: 
-            | {{thing.assessment}}
-            hr
-            b FOLLOW UP: 
-            | {{thing.followup}}
-            hr
-            b EVALUATION: 
-            | {{thing.evaluation}}
-            hr
+
+      table.table-striped
+        tr
+          th(width='10%') Name
+          th(width='3%') Id
+          th(width='5%') DOB
+          th(width='5%') TOA
+          th(width='5%') MRP
+          th(width='10%') NURSE
+          th(width='15%') STORY
+          th(width='15%') ASSESSMENT
+          th(width='15%') FOLLOW UP
+          th(width='15%') EVALUATION
+          th(width='2%') EDIT/DELETE
+        tr(ng-repeat='thing in awesomeThings')
+          td 
+            img.img-responsive(src="assets/images/{{thing.avtar}}" alt="Avtar" height="23" width="25")  
+            |{{thing.name}}
+          td {{thing.identifier}}
+          td {{thing.dob | limitTo:10 }} 
+          td {{thing.datet | limitTo:10 }}
+          td {{thing.mrp}}
+          td {{thing.nurse}}
+          td {{thing.story}}
+          td {{thing.assessment}}
+          td {{thing.followup}}
+          td {{thing.evaluation}}
+          td 
             a.edit(ng-click='editThing(thing)')
               span.glyphicon.glyphicon-edit.pull-left
             a.trash(ng-click='deleteThing(thing)')
               span.glyphicon.glyphicon-trash.pull-right
-
 
                       
 <script>
@@ -47,7 +49,7 @@ div(ng-include='"components/navbar/navbar.html"')
 |    $("#form").show();
 |});
 </script>
-h1 TOA FORM
+h2 TOA FORM
 a.hide-form [Hide form |
 a.show-form  Show form]
   //- This form needs to be beautified.
