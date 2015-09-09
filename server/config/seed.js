@@ -39,13 +39,8 @@ Thing.find({}).remove(function() {
   });
 });
 
-User.find({}).remove(function() {
+User.find({email: 'admin@admin.com'}).remove(function() {
   User.create({
-    provider: 'local',
-    name: 'Test User',
-    email: 'test@test.com',
-    password: 'test'
-  }, {
     provider: 'local',
     role: 'admin',
     name: 'Admin',
