@@ -11,18 +11,6 @@ var UserSchema = new Schema({
     type: String,
     default: 'user'
   },
-  ip1: {
-    type: String,
-    default: '127.0.0.1'
-  },
-  ip2: {
-    type: String,
-    default: '0.0.0.0'
-  },
-  ip3: {
-    type: String,
-    default: 'localhost'
-  },
   hashedPassword: String,
   provider: String,
   salt: String

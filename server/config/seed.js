@@ -34,6 +34,7 @@ Thing.find({}).remove(function() {
 Thing.find({}).remove(function() {
   Thing.create({
     name : 'Data Reset',
+    avatar: 'male-01.png',
     identifier : 'Delete Me'
   });
 });
