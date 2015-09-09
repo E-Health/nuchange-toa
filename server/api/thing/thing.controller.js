@@ -12,13 +12,6 @@
 var _ = require('lodash');
 var Thing = require('./thing.model');
 
-// Get the client IP
-// Get list of things
-exports.ip = function(req, res) {
-  var client_ip = { 'ip': req.connection.remoteAddress};
-  return res.status(200).json(client_ip);
-};
-
 // Get list of things
 exports.index = function(req, res) {
   Thing.find(function (err, things) {

@@ -8,18 +8,6 @@ div(ng-include='"components/navbar/navbar.html"')
       br
       span.text-muted {{user.email}} |
         .form-group
-          label IP1
-          input.form-control(type='text', name='ip1', ng-model='user.ip1', mongoose-error='')
-          a.add(ng-click='addip(user)')
-            span.glyphicon.glyphicon-plus-sign.pull-right
-          label IP2
-          input.form-control(type='text', name='ip3', ng-model='user.ip2', mongoose-error='')
-          a.add(ng-click='addip(user)')
-            span.glyphicon.glyphicon-plus-sign.pull-right
-          label IP3
-          input.form-control(type='text', name='ip3', ng-model='user.ip3', mongoose-error='')
-          a.add(ng-click='addip(user)')
-            span.glyphicon.glyphicon-plus-sign.pull-right
       a.trash(ng-click='delete(user)')
         span.glyphicon.glyphicon-trash.pull-right
       br

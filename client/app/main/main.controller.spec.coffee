@@ -19,12 +19,6 @@ describe 'Controller: MainCtrl', ->
       'Karma'
       'Express'
     ]
-    $httpBackend.expectGET('/api/things/ip/ip').respond [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-      'Express'
-    ]
     scope = $rootScope.$new()
     MainCtrl = $controller 'MainCtrl',
       $scope: scope

@@ -5,8 +5,6 @@ div(ng-include='"components/navbar/navbar.html"')
   .row
     .col-lg-12
       h1.page-header Patients:
-      //-ul.nav.nav-tabs.nav-stacked
-
       table.table-striped
         tr
           th(width='10%') Name
@@ -18,9 +16,9 @@ div(ng-include='"components/navbar/navbar.html"')
           th(width='15%') STORY
           th(width='15%') ASSESSMENT
           th(width='15%') FOLLOW UP
-          th(width='15%') EVALUATION
+          th(width='15%') EVALUATION 
           th(width='2%') EDIT/DELETE
-        tr(ng-repeat='thing in awesomeThings')
+        tr(ng-repeat="thing in awesomeThings | loggedinUser")
           td 
             img.img-responsive(src="assets/images/{{thing.avtar}}" alt="Avtar" height="23" width="25")  
             |{{thing.name}}
@@ -31,14 +29,14 @@ div(ng-include='"components/navbar/navbar.html"')
           td {{thing.nurse}}
           td {{thing.story}}
           td {{thing.assessment}}
-          td {{thing.followup}}
+          td {{thing.followup}} 
           td {{thing.evaluation}}
           td 
             a.edit(ng-click='editThing(thing)')
               span.glyphicon.glyphicon-edit.pull-left
             a.trash(ng-click='deleteThing(thing)')
               span.glyphicon.glyphicon-trash.pull-right
-
+                
                       
 <script>
 | $(".hide-form").click(function(){
@@ -93,5 +91,5 @@ a.show-form  Show form]
 footer.footer
   .container
     p
-      a.nuchange(href='http://nuchange.ca') NuChange ToA Ver 1.0.1
+      a.nuchange(href='http://nuchange.ca') NuChange ToA Ver 2.0.1
       

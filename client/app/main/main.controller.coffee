@@ -1,14 +1,15 @@
 'use strict'
 
 angular.module 'toaApp'
-.controller 'MainCtrl', ($scope, $http, socket) ->
+.controller 'MainCtrl', ($scope, $http, socket, Auth) ->
   $scope.awesomeThings = []
+  $scope.isLoggedIn = Auth.isLoggedIn
+  $scope.isAdmin = Auth.isAdmin
+  $scope.getCurrentUser = Auth.getCurrentUser
 
   $http.get('/api/things').success (awesomeThings) ->
     $scope.awesomeThings = awesomeThings
     socket.syncUpdates 'thing', $scope.awesomeThings
-  $http.get('/api/things/ip/ip').success (clientIp) ->
-    $scope.newIp = clientIp.ip
   
   $scope.addThing = ->
     return if $scope.newName is ''
@@ -24,7 +25,7 @@ angular.module 'toaApp'
       assessment: $scope.newAssessment
       followup: $scope.newFollowup
       evaluation: $scope.newEvaluation
-      ip : $scope.newIp
+      ip : $scope.getCurrentUser().email
     $scope.newName = ''
     $scope.newIdentifier = ''
     $scope.newAvtar = ''
@@ -56,3 +57,16 @@ angular.module 'toaApp'
 
   $scope.$on '$destroy', ->
     socket.unsyncUpdates 'thing'
+#setup filter    
+.filter 'loggedinUser', (Auth)  ->
+  # Create the return function and set the required parameter name to **input**
+  (input) ->
+    out = []
+    # Using the angular.forEach method, go through the array of data and perform the operation of figuring out if the language is statically or dynamically typed.
+    angular.forEach input, (thing) ->
+      if thing.ip == Auth.getCurrentUser().email
+        out.push thing
+      return
+    out
+
+
