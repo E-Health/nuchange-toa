@@ -5,6 +5,8 @@ div(ng-include='"components/navbar/navbar.html"')
   .row
     .col-lg-12
       h1.page-header Patients:
+      label Search
+        input(ng-model="searchString", size="10")
       table.table-striped
         tr
           th(width='10%') Name
@@ -18,7 +20,7 @@ div(ng-include='"components/navbar/navbar.html"')
           th(width='15%') FOLLOW UP
           th(width='15%') EVALUATION 
           th(width='2%') EDIT/DELETE
-        tr(ng-repeat="thing in awesomeThings | loggedinUser")
+        tr(ng-repeat="thing in awesomeThings | loggedinUser | filter:searchString")
           td 
             img.img-responsive(src="assets/images/{{thing.avtar}}" alt="Avtar" height="23" width="25")  
             |{{thing.name}}
