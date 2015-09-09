@@ -39,6 +39,17 @@ Thing.find({}).remove(function() {
   });
 });
 
+User.create({
+  provider: 'local',
+  role: 'admin',
+  name: 'Admin',
+  email: 'admin@admin.com',
+  password: 'admin'
+}, function() {
+    console.log('Creating default admin.');
+  }
+);
+
 User.find({email: 'admin@admin.com'}).remove(function() {
   User.create({
     provider: 'local',

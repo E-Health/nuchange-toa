@@ -3,13 +3,21 @@ div(ng-include='"components/navbar/navbar.html"')
   .row
     .col-sm-12
       
-<h1><a id="NuChange__ToA_Redifining_Transfer_of_Accountability_0"></a>NuChange - ToA: Redifining Transfer of Accountability</h1>
-<p>Communication of information between nurses, especially during change of shifts is vital in patient care. NuChange TOA aids this communication by providing a spreadsheet like application that <strong>syncs in real time</strong> between systems loggedin as same generic user. It is ideal for projecting on to smart-boards.  NuChange TOA incorporates “S.A.F.E.” reporting process: Story, Assessment, Follow-up, and Evaluation.</p>
-<blockquote>
-<p>DISCLAIMER: <strong>THIS IS A DEMO APPLICATION.</strong> WE ARE NOT LIABLE UNDER ANY CIRCUMSTANCE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY, EXTRA-CONTRACTUAL, OR PUNITIVE DAMAGES OF ANY KIND WHATSOEVER, INCLUDING, BUT NOT LIMITED TO, LOST REVENUES OR LOST PROFITS, PERSONAL INJURY OR WRONGFUL DEATH, WHICH MAY OR DOES RESULT FROM  THE USE OF, ACCESS TO, OR INABILITY TO USE THIS APPLICATION.</p>
-</blockquote>
+    h1
+      a#NuChange__ToA_Redifining_Transfer_of_Accountability_0
+      | NuChange - ToA: Redifining Transfer of Accountability
+    p
+      | Communication of information between nurses, especially during change of shifts is vital in patient care. NuChange TOA aids this communication by providing a spreadsheet like application that 
+      strong syncs in real time
+      |  between systems loggedin as same generic user. It is ideal for projecting on to smart-boards.  NuChange TOA incorporates “S.A.F.E.” reporting process: Story, Assessment, Follow-up, and Evaluation.
+    blockquote
+      p
+        | DISCLAIMER: 
+        strong THIS IS A DEMO APPLICATION.
+        |  WE ARE NOT LIABLE UNDER ANY CIRCUMSTANCE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY, EXTRA-CONTRACTUAL, OR PUNITIVE DAMAGES OF ANY KIND WHATSOEVER, INCLUDING, BUT NOT LIMITED TO, LOST REVENUES OR LOST PROFITS, PERSONAL INJURY OR WRONGFUL DEATH, WHICH MAY OR DOES RESULT FROM  THE USE OF, ACCESS TO, OR INABILITY TO USE THIS APPLICATION.
 
-      h2 Sign up
+
+    h2 Sign up
     .col-sm-12
       form.form(name='form', ng-submit='register(form)', novalidate='')
         .form-group(ng-class='{ "has-success": form.name.$valid && submitted,\
