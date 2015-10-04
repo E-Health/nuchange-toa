@@ -13,9 +13,9 @@ Nuchange ToA is developed using MEAN stack.
 ## [See a working demo: http://nuchange.ca/toa](http://nuchange.ca/toa)
 
 ## Model is in 
-Client -> main -> main.coffee.controller
-Server -> thing -> thing.model.js
-client -> app -> main -> main.jade (form)
+- Client -> main -> main.coffee.controller
+- Server -> thing -> thing.model.js
+- client -> app -> main -> main.jade (form)
 
 ## To do
 
