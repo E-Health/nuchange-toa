@@ -7,6 +7,9 @@ dist
 /server/config/local.env.js
 npm-debug.log
 
+#Ignore images
+client/assets/images
+
 .DS_Store
 .AppleDouble
 .LSOverride
