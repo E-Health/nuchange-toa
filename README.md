@@ -4,11 +4,11 @@
 
 ## How to install:
 Nuchange ToA is developed using MEAN stack. 
-1. Install npm, grunt, and Git
-2. Git Clone master to a folder and cd to that folder.
-3. npm install 
-4. grunt serve
-5. Add .PNG icons to client->assets->images with names male-01.png to male-05.png and female-01.png to female-05.png
+- Install npm, grunt, and Git
+- Git Clone master to a folder and cd to that folder.
+- npm install 
+- grunt serve
+- Add .PNG icons to client->assets->images with names male-01.png to male-05.png and female-01.png to female-05.png
 
 ## [See a working demo: http://nuchange.ca/toa](http://nuchange.ca/toa)
 
