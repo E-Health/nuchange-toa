@@ -23,10 +23,7 @@ Nuchange ToA is developed using MEAN stack.
 Idea hatched during a casual discussion with Ria and Mohammed.
 
 ## Contact US
-[Send an email](http://nuchange.ca/contact) OR [Join us on PRO{DENTS}](http://prodents.com)
-
-### Contact Us on the IRC Channel ##ehealth 
-[![Visit our IRC channel](https://kiwiirc.com/buttons/irc.freenode.net/ehealth.png)](https://kiwiirc.com/client/irc.freenode.net/?nick=nuchange|?##ehealth)
+[Send an email](http://nuchange.ca/contact) OR [Join us on PRO{DENTS}](http://prodents.com) OR [![Visit our IRC channel](https://kiwiirc.com/buttons/irc.freenode.net/ehealth.png)](https://kiwiirc.com/client/irc.freenode.net/?nick=nuchange|?##ehealth)
 
 
 ## Disclaimer
